@@ -1,0 +1,81 @@
+/**
+	Copyright (c) 2009,2010, Tassos Souris
+	All rights reserved.
+
+	Redistribution and use in source and binary forms, with or without
+	modification, are permitted provided that the following conditions are met:
+		* Redistributions of source code must retain the above copyright
+		  notice, this list of conditions and the following disclaimer.
+		* Redistributions in binary form must reproduce the above copyright
+		  notice, this list of conditions and the following disclaimer in the
+		  documentation and/or other materials provided with the distribution.
+		* Neither the name of the <organization> nor the
+		  names of its contributors may be used to endorse or promote products
+		  derived from this software without specific prior written permission.
+
+	THIS SOFTWARE IS PROVIDED BY Tassos Souris ''AS IS'' AND ANY
+	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	DISCLAIMED. IN NO EVENT SHALL Tassos Souris BE LIABLE FOR ANY
+	DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+/**
+ * \file config.h
+ *
+ * The config.h header file contains the definitions of several constants used as configuration
+ * parameters by the server.
+ *
+ * @author Tassos Souris 
+ */
+#if !defined( CONFIG_H_IS_INCLUDED )
+#define CONFIG_H_IS_INCLUDED 1
+
+#if defined( __cplusplus )
+extern "C"{
+#endif
+
+#include <sys/socket.h>
+
+// The port in which the server will listen for sayers
+#define SAYERS_PORT  (3331)
+
+// The port in which the server will listen for hearers
+#define HEARERS_PORT (3332)
+
+// Every STATS_UPDATE_NSEC the statistics will be updated
+#define STATS_UPDATE_NSEC (1)
+
+// The value used as second argument to the listen() function
+#define SOCKET_BACKLOG (SOMAXCONN)
+
+// Maximum length of a twit
+#define TWIT_MAXLEN (140)
+
+// Maximum time to wait for a read() from a sayer
+#define SAYER_WAIT_NSEC (10)
+
+// Maximum time to wait for a write() to a hearer
+#define HEARER_WAIT_NSEC (10)
+
+// Maximum number of twits a sayer can send
+#define SAYER_TWIT_MAXCOUNT (50)
+
+// Maximum number of sayers allowed
+#define SAYERS_MAXCOUNT (30)
+
+// Maximum number of hearers allowed
+#define HEARERS_MAXCOUNT (30)
+
+// Maximum number of twits allowed to be stored at any time in memory
+#define TWIT_MAXCOUNT (12000)
+
+#if defined( __cplusplus )
+}
+#endif
+
+#endif

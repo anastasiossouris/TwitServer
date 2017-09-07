@@ -1,0 +1,12 @@
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c util.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c error.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c connect.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c read.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c twitsay.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c twitspeak.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c twitrapid.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c twithear.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused util.o error.o connect.o read.o twitsay.o -o twitsay -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused util.o error.o read.o twitspeak.o -o twitspeak -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused util.o error.o read.o connect.o twitrapid.o -o twitrapid -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused util.o error.o read.o connect.o twithear.o -o twithear -p -pg -g3

@@ -1,0 +1,3 @@
+valgrind --tool=memcheck  -v -v -v -v -v -v -v --track-fds=yes --time-stamp=yes --log-file=./tests/memcheck.out --track-origins=yes \
+	--leak-check=full --show-reachable=yes --leak-resolution=high ./server
+# valgrind --tool=helgrind  -v -v -v -v -v -v -v --track-fds=yes --time-stamp=yes --log-file=./tests/helgrind.out ./server

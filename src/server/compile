@@ -1,0 +1,14 @@
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c error.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c util.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c server.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c init.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c sighandling.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c serverinfo.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c listen.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c statistics.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c conn.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c twitpool.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c consume.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c twit.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall -Wunused -Wextra -D_POSIX_SOURCE -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -c twitpoollist.c -p -pg -g3
+gcc -std=c99 -posix -W -Wall  -Wunused -Wextra error.o util.o sighandling.o init.o twitpool.o serverinfo.o twit.o consume.o twitpoollist.o listen.o statistics.o conn.o server.o -o server -p -pg -g3 -lpthread

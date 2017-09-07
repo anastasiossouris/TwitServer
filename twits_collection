@@ -1,0 +1,181 @@
+plete the “other work” from the total time reported in the
+figures.
+   Figure 3 shows net elapsed time in seconds for one
+million enqueue/dequeue pairs. Roughly speaking, this
+corresponds to the time in microseconds for one en-
+queue/dequeue pair. More precisely, for k processors, the
+graph shows the time one processor spends performing
+106 =k enqueue/dequeue pairs, plus the amount by which
+the critical path of the other 10 6 (k ; 1)=k pairs performed
+by other processors exceeds the time spent by the first pro-
+cessor in “other work” and loop overhead. For k = 1, the
+second term is zero. As k increases, the first term shrinks to-
+ward zero, and the second term approaches the critical path
+length of the overall computation; i.e. one million times
+the serial portion of an enqueue/dequeue pair. Exactly how
+much execution will overlap in different processors depends
+on the choice of algorithm, the number of processors k, and
+the length of the “other work” between queue operations.
+   With only one processor, memory references in all but
+the first loop iteration hit in the cache, and completion
+times are very low. With two processors active, contention
+for head and tail pointers and queue elements causes a high
+fraction of references to miss in the cache, leading to sub-
+stantially higher completion times. The queue operations of
+processor 2, however, fit into the “other work” time of pro-
+cessor 1, and vice versa, so we are effectively measuring the
+time for one processor to complete 5 105 enqueue/dequeue
+pairs. At three processors, the cache miss rate is about the
+same as it was with two processors. Each processor only
+has to perform 106 =3 enqueue/dequeue pairs, but some of
+the operations of the other processors no longer fit in the
+first processor’s “other work” time. Total elapsed time
+decreases, but by a fraction less than 1=3. Toward the
+right-hand side of the graph, execution time rises for most
+algorithms as smaller and smaller amounts of per-processor
+“other work” and loop overhead are subtracted from a total
+time dominated by critical path length. In the single-lock
+and Mellor-Crummey curves, the increase is probably ac-
+celerated as high rates of contention increase the average
+cost of a cache miss. In Valois’s algorithm, the plotted time
+continues to decrease, as more and more of the memory
+management overhead moves out of the critical path and
+into the overlapped part of the computation.
+   Figures 4 and 5 plot the same quantity as figure 3, but for
+a system with 2 and 3 processes per processor, respectively.
+The operating system multiplexes the processor among pro-
+cesses with a scheduling quantum of 10 ms. As expected,
+the blocking algorithms fare much worse in the presence of
+multiprogramming, since an inopportune preemption can
+block the progress of every process in the system. Also as
+expected, the degree of performance degradation increases
+with the level of multiprogramming.
+   In all three graphs, the new non-blocking queue outper-
+forms all of the other alternatives when three or more pro-
+cessors are active. Even for one or two processors, its per-
+plete the “other work” from the total time reported in the
+figures.
+   Figure 3 shows net elapsed time in seconds for one
+million enqueue/dequeue pairs. Roughly speaking, this
+corresponds to the time in microseconds for one en-
+queue/dequeue pair. More precisely, for k processors, the
+graph shows the time one processor spends performing
+106 =k enqueue/dequeue pairs, plus the amount by which
+the critical path of the other 10 6 (k ; 1)=k pairs performed
+by other processors exceeds the time spent by the first pro-
+cessor in “other work” and loop overhead. For k = 1, the
+second term is zero. As k increases, the first term shrinks to-
+ward zero, and the second term approaches the critical path
+length of the overall computation; i.e. one million times
+the serial portion of an enqueue/dequeue pair. Exactly how
+much execution will overlap in different processors depends
+on the choice of algorithm, the number of processors k, and
+the length of the “other work” between queue operations.
+   With only one processor, memory references in all but
+the first loop iteration hit in the cache, and completion
+times are very low. With two processors active, contention
+for head and tail pointers and queue elements causes a high
+fraction of references to miss in the cache, leading to sub-
+stantially higher completion times. The queue operations of
+processor 2, however, fit into the “other work” time of pro-
+cessor 1, and vice versa, so we are effectively measuring the
+time for one processor to complete 5 105 enqueue/dequeue
+pairs. At three processors, the cache miss rate is about the
+same as it was with two processors. Each processor only
+has to perform 106 =3 enqueue/dequeue pairs, but some of
+the operations of the other processors no longer fit in the
+first processor’s “other work” time. Total elapsed time
+decreases, but by a fraction less than 1=3. Toward the
+right-hand side of the graph, execution time rises for most
+algorithms as smaller and smaller amounts of per-processor
+“other work” and loop overhead are subtracted from a total
+time dominated by critical path length. In the single-lock
+and Mellor-Crummey curves, the increase is probably ac-
+celerated as high rates of contention increase the average
+cost of a cache miss. In Valois’s algorithm, the plotted time
+continues to decrease, as more and more of the memory
+management overhead moves out of the critical path and
+into the overlapped part of the computation.
+   Figures 4 and 5 plot the same quantity as figure 3, but for
+a system with 2 and 3 processes per processor, respectively.
+The operating system multiplexes the processor among pro-
+cesses with a scheduling quantum of 10 ms. As expected,
+the blocking algorithms fare much worse in the presence of
+multiprogramming, since an inopportune preemption can
+block the progress of every process in the system. Also as
+expected, the degree of performance degradation increases
+with the level of multiprogramming.
+   In all three graphs, the new non-blocking queue outper-
+forms all of the other alternatives when three or more pro-
+cessors are active. Even for one or two processors, its per-
+plete the “other work” from the total time reported in the
+figures.
+   Figure 3 shows net elapsed time in seconds for one
+million enqueue/dequeue pairs. Roughly speaking, this
+corresponds to the time in microseconds for one en-
+queue/dequeue pair. More precisely, for k processors, the
+graph shows the time one processor spends performing
+106 =k enqueue/dequeue pairs, plus the amount by which
+the critical path of the other 10 6 (k ; 1)=k pairs performed
+by other processors exceeds the time spent by the first pro-
+cessor in “other work” and loop overhead. For k = 1, the
+second term is zero. As k increases, the first term shrinks to-
+ward zero, and the second term approaches the critical path
+length of the overall computation; i.e. one million times
+the serial portion of an enqueue/dequeue pair. Exactly how
+much execution will overlap in different processors depends
+on the choice of algorithm, the number of processors k, and
+the length of the “other work” between queue operations.
+   With only one processor, memory references in all but
+the first loop iteration hit in the cache, and completion
+times are very low. With two processors active, contention
+for head and tail pointers and queue elements causes a high
+fraction of references to miss in the cache, leading to sub-
+stantially higher completion times. The queue operations of
+processor 2, however, fit into the “other work” time of pro-
+cessor 1, and vice versa, so we are effectively measuring the
+time for one processor to complete 5 105 enqueue/dequeue
+pairs. At three processors, the cache miss rate is about the
+same as it was with two processors. Each processor only
+has to perform 106 =3 enqueue/dequeue pairs, but some of
+the operations of the other processors no longer fit in the
+first processor’s “other work” time. Total elapsed time
+decreases, but by a fraction less than 1=3. Toward the
+right-hand side of the graph, execution time rises for most
+algorithms as smaller and smaller amounts of per-processor
+“other work” and loop overhead are subtracted from a total
+time dominated by critical path length. In the single-lock
+and Mellor-Crummey curves, the increase is probably ac-
+celerated as high rates of contention increase the average
+cost of a cache miss. In Valois’s algorithm, the plotted time
+continues to decrease, as more and more of the memory
+management overhead moves out of the critical path and
+into the overlapped part of the computation.
+   Figures 4 and 5 plot the same quantity as figure 3, but for
+a system with 2 and 3 processes per processor, respectively.
+The operating system multiplexes the processor among pro-
+cesses with a scheduling quantum of 10 ms. As expected,
+the blocking algorithms fare much worse in the presence of
+multiprogramming, since an inopportune preemption can
+block the progress of every process in the system. Also as
+expected, the degree of performance degradation increases
+with the level of multiprogramming.
+   In all three graphs, the new non-blocking queue outper-
+forms all of the other alternatives when three or more pro-
+cessors are active. Even for one or two processors, its per-
+plete the “other work” from the total time reported in the
+figures.
+   Figure 3 shows net elapsed time in seconds for one
+million enqueue/dequeue pairs. Roughly speaking, this
+corresponds to the time in microseconds for one en-
+queue/dequeue pair. More precisely, for k processors, the
+graph shows the time one processor spends performing
+106 =k enqueue/dequeue pairs, plus the amount by which
+the critical path of the other 10 6 (k ; 1)=k pairs performed
+by other processors exceeds the time spent by the first pro-
+cessor in “other work” and loop overhead. For k = 1, the
+second term is zero. As k increases, the first term shrinks to-
+ward zero, and the second term approaches the critical path
+length of the overall computation; i.e. one million times
+the serial portion of an enqueue/dequeue pair. Exactly how
+much execution will overlap in different processors depends
